@@ -1,5 +1,5 @@
 
-<% flash.<% items.each do |key, value| %>
+<% flash.each do |key, value| %>
     <div class="fixed-top mt-5 container">
         <div class="alert <%= bs4_bgcolor_for(key) %> alert-dismissable fade show my-3">
             <%= value %>
