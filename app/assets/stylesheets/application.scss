@@ -15,3 +15,7 @@
  */
 @import "bootstrap";
 @import "layouts";
+
+// forms.scss, devise.scss,ファイルを読み込めるように
+@import "forms";
+@import "devise";
