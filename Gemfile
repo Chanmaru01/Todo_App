@@ -61,3 +61,6 @@ gem 'jquery-rails'
 
 # devise
 gem 'devise'
+
+# manage sort order
+gem 'acts_as_list'
