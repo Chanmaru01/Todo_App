@@ -19,3 +19,8 @@
 // forms.scss, devise.scss,ファイルを読み込めるように
 @import "forms";
 @import "devise";
+
+// fontawesomeの導入
+@import "scaffolds";
+@import "goals";
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/all.css");
