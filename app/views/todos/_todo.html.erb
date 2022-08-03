@@ -10,15 +10,15 @@
         <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-ellipsis-v"></i>
         </button>
-    <div class="dropdown-menu dropdown-menu-right text-middle">
+        <div class="dropdown-menu dropdown-menu-right text-middle">
         <%= form_with(model: todo, url: [todo.goal, todo], remote: true) do |form| %>
-        <% if todo.done %>
+            <% if todo.done %>
             <%= form.hidden_field :done, value: false, readonly: true %>
             <%= form.submit "未完了", class: "dropdown-item text-success" %>
-        <% else %>
+            <% else %>
             <%= form.hidden_field :done, value: true, readonly: true %>
             <%= form.submit "完了！", class: "dropdown-item text-success" %>
-        <% end %>
+            <% end %>
         <% end %>
         <div class="dropdown-divider"></div>
         <%= link_to "並びかえ", sort_goal_todo_path(todo.goal, todo), class: "dropdown-item", remote: true %>
@@ -31,9 +31,9 @@
         </div>
     </div>
     <div class="card-text">
-    <small class="text-muted">
+        <small class="text-muted">
         <%= todo.created_at.strftime('%Y/%m/%d') %>
         </small>
-        </div>
+    </div>
     </div>
 </div>

@@ -1,5 +1,5 @@
 // エラーのあるフィールドの枠線を赤く表示する
-.field_with_error > * {
+.field_with_errors > * {
   border-color: red !important;
 }
 

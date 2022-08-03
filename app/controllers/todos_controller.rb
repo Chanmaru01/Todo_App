@@ -19,7 +19,7 @@ before_action :set_todo, only: [:show, :edit, :update, :destroy, :sort]
 
   # POST /todos
   def create
-    @todo = @goals.todo.new(todo_params)
+    @todo = @goal.todos.new(todo_params)
 
     if @todo.save
 #create, #update の結果を @status という変数に反映する。
@@ -45,13 +45,14 @@ before_action :set_todo, only: [:show, :edit, :update, :destroy, :sort]
   end
 
   private
-    def set_goal
-      @goal = current_user.goals.find_by(id: params[:goal_id])
-      redirect_to(goal_url, alert: "ERROR!!") if @goal.blank?
-    end
+
+  def set_goal
+    @goal = current_user.goals.find_by(id: params[:goal_id])
+    redirect_to(goals_url, alert: "ERROR!!") if @goal.blank?
+  end
 
     def set_todo
-      @todo = @goal.todo.find_by(params[:id])
+      @todo = @goal.todos.find_by(params[:id])
     end
 
     def todo_params

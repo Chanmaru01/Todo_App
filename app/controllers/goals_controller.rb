@@ -24,7 +24,6 @@ class GoalsController < ApplicationController
   # POST /goals
   def create
     @goal = current_user.goals.new(goal_params)
-
     if @goal.save
       @status = true
     else
@@ -47,6 +46,7 @@ class GoalsController < ApplicationController
   end
 
   private
+  
     def set_goal
       @goal = current_user.goals.find_by(id: params[:id])
       redirect_to(goals_url, alert: "ERROR!!") if @goal.blank?
