@@ -1,9 +1,7 @@
-<%# id="modalArea"という要素を取得し %>
-<%# j(render 'form', goal: @goal) を出力しています。 %>
 $("#modalArea").html("<%= j(render 'form', goal: @goal) %>")
-<%# フォームにフォーカス %>
-<%# #modalArea`のなかから`.modal`を探してshown.bs.modalのタイミングで実行しなさい %>
+
 $("#modalArea").find(".modal").on('shown.bs.modal', () => {
     $("#modalArea").find("form input[type=text]")[0].focus();
 })
+
 $("#modalArea").find(".modal").modal('show')

@@ -29,6 +29,8 @@ class GoalsController < ApplicationController
     else
       @status = false
     end
+    puts "aaaaaaaaaaaaaaaaaaaa"
+    puts @status
   end
 
   # PATCH/PUT /goals/1

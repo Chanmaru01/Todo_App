@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap";
+@import 'bootstrap/scss/bootstrap';
 @import "layouts";
 
 // forms.scss, devise.scss,ファイルを読み込めるように

@@ -1,7 +1,7 @@
 <div class="modal fade" id="goalModal" tabindex="-1" role="dialog" aria-labelledby="goalModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <%= form_with(model: goal, remote: true) do |form| %>
+      <%= form_with(model: goal, local: false) do |form| %>
         <div class="modal-header">
           <h5 class="modal-title" id="goalModal"><%= "#{params[:action].camelize} #{goal.model_name.human}" %></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
